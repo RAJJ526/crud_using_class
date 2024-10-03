@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles3.css">
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+    <label for="">Name</label>
+    <input type="text" name="name" value="{{obj.name}}">
+    <h6>{{error.errors.name}}</h6>
+    <label for="">Id</label>
+    <input type="number" name="student_id" value="{{obj.student_id}}">
+    <h6>{{error.errors.student_id}}</h6>
+    <label for="">Total Marks</label>
+    <input type="number" name="total_marks" value="{{obj.total_marks}}">
+    <h6>{{error.errors.total_marks}}</h6>
+    <label for="">Phone No</label>
+    <input type="number" name="phone_no" value="{{obj.phone_no}}">
+    <h6>{{error.errors.phone_no}}</h6>
+
+    <button type="submit">update</button>
+</body>
+</html>
